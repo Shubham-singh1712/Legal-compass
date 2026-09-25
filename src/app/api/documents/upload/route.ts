@@ -14,6 +14,56 @@ function sanitizeFilename(name: string): string {
     .substring(0, 100);
 }
 
+async function parsePdfSafely(buffer: Buffer): Promise<{ text: string; numpages: number }> {
+  // Ensure buffer has its own dedicated ArrayBuffer (byteOffset === 0)
+  // to prevent pdf.js LoopbackPort slicing bug on pooled Node buffers
+  const unpooledBuffer = Buffer.from(new Uint8Array(buffer));
+
+  // 1. Try direct in-process parse first
+  try {
+    const pdfData = await pdfParse(unpooledBuffer);
+    if (pdfData && typeof pdfData.text === 'string' && pdfData.text.trim().length > 0) {
+      return { text: pdfData.text, numpages: pdfData.numpages || 1 };
+    }
+  } catch (directErr) {
+    console.warn(
+      'Direct PDF parsing encountered issue, falling back to isolated worker:',
+      directErr instanceof Error ? directErr.message : directErr
+    );
+  }
+
+  // 2. Fallback: Use isolated worker_threads to bypass any shared global pdf.js worker state
+  try {
+    const { Worker } = await import('worker_threads');
+    return await new Promise<{ text: string; numpages: number }>((resolve, reject) => {
+      const workerCode = `
+        const { parentPort, workerData } = require('worker_threads');
+        const pdf = require('pdf-parse');
+        pdf(workerData).then(data => {
+          parentPort.postMessage({
+            text: data.text,
+            numpages: data.numpages
+          });
+        }).catch(err => {
+          parentPort.postMessage({ error: err.message });
+        });
+      `;
+      const worker = new Worker(workerCode, { eval: true, workerData: unpooledBuffer });
+      worker.on('message', (msg) => {
+        if (msg.error) reject(new Error(msg.error));
+        else resolve({ text: msg.text || '', numpages: msg.numpages || 1 });
+      });
+      worker.on('error', reject);
+      worker.on('exit', (code) => {
+        if (code !== 0) reject(new Error('Worker stopped with exit code ' + code));
+      });
+    });
+  } catch (workerErr) {
+    console.error('Worker thread PDF parsing also failed:', workerErr instanceof Error ? workerErr.message : workerErr);
+    throw workerErr;
+  }
+}
+
 export async function POST(req: NextRequest) {
   try {
     const formData = await req.formData();
@@ -83,13 +133,13 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Parse PDF content using pdf-parse
+    // Parse PDF content safely using unpooled buffer with worker thread isolation fallback
     let extractedText = '';
     let pageCount = 1;
     try {
-      const pdfData = await pdfParse(buffer);
-      extractedText = pdfData.text || '';
-      pageCount = pdfData.numpages || 1;
+      const parsed = await parsePdfSafely(buffer);
+      extractedText = parsed.text || '';
+      pageCount = parsed.numpages || 1;
     } catch (parseError) {
       console.error('PDF text extraction failed:', parseError instanceof Error ? parseError.message : 'unknown parser error');
       return NextResponse.json(

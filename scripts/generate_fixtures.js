@@ -40,9 +40,9 @@ function makePdfProper(lines) {
   }
 
   const startXref = totalOffset;
-  let xrefStr = `xref\r\n0 ${objs.length + 1}\r\n0000000000 65535 f \r\n`;
+  let xrefStr = `xref\r\n0 ${objs.length + 1}\r\n0000000000 65535 f\r\n`;
   for (const ofs of offsets) {
-    xrefStr += String(ofs).padStart(10, '0') + ' 00000 n \r\n';
+    xrefStr += String(ofs).padStart(10, '0') + ' 00000 n\r\n';
   }
   const xrefBuf = Buffer.from(xrefStr, 'latin1');
   const trailerBuf = Buffer.from(`trailer\r\n<< /Size ${objs.length + 1} /Root 1 0 R >>\r\nstartxref\r\n${startXref}\r\n%%EOF\r\n`, 'latin1');

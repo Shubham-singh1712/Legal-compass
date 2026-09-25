@@ -1,0 +1,90 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /ProcSet [/PDF /Text] /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 2195 >>
+stream
+BT
+/F1 10 Tf
+50 750 Td
+(ENTERPRISE SAAS VENDOR AGREEMENT) Tj
+0 -14 Td
+(This Enterprise SaaS Agreement is entered into on May 1, 2025 between CloudScale Analytics Inc. \("Vendor"\)) Tj
+0 -14 Td
+(and Global Enterprises Ltd. \("Customer"\).) Tj
+0 -14 Td
+0 -10 Td
+(1. SUBSCRIPTION GRANT AND USAGE) Tj
+0 -14 Td
+(Vendor grants Customer a non-exclusive, non-transferable subscription license to access the Analytics Platform.) Tj
+0 -14 Td
+(Customer is authorized for up to 100 enterprise user accounts.) Tj
+0 -14 Td
+0 -10 Td
+(2. SERVICE LEVEL AGREEMENT \(SLA\) AND UPTIME) Tj
+0 -14 Td
+(Vendor guarantees 99.9 percent monthly platform uptime excluding scheduled maintenance.) Tj
+0 -14 Td
+(Customer is entitled to a 10 percent monthly service credit if monthly uptime drops below 99.9 percent in any calendar month.) Tj
+0 -14 Td
+(Vendor shall respond to critical service tickets within 1 hour.) Tj
+0 -14 Td
+0 -10 Td
+(3. DATA SECURITY AND PRIVACY) Tj
+0 -14 Td
+(Vendor shall maintain SOC 2 Type II compliance and AES-256 encryption for data in transit and at rest.) Tj
+0 -14 Td
+(Customer retains sole and exclusive ownership of all Customer Data uploaded to the platform.) Tj
+0 -14 Td
+0 -10 Td
+(4. FEES AND PAYMENT TERMS) Tj
+0 -14 Td
+(Customer shall pay an annual subscription fee of $48,000, invoiced annually in advance.) Tj
+0 -14 Td
+(Invoices are payable within Net 30 days. Unpaid invoices past 30 days are subject to service suspension.) Tj
+0 -14 Td
+0 -10 Td
+(5. LIMITATION OF LIABILITY) Tj
+0 -14 Td
+(Vendor total aggregate liability under this Agreement shall not exceed the total fees paid in previous 12 months.) Tj
+0 -14 Td
+(Neither party shall be liable for indirect, punitive, or consequential damages.) Tj
+0 -14 Td
+0 -10 Td
+(6. TERM, RENEWAL, AND TERMINATION) Tj
+0 -14 Td
+(Initial term is 12 months, auto-renewing for successive 1-year terms unless notice is given 60 days prior to renewal.) Tj
+0 -14 Td
+(Either party may terminate for material breach if not cured within 30 days written notice.) Tj
+0 -14 Td
+0 -10 Td
+(7. GOVERNING LAW) Tj
+0 -14 Td
+(This Agreement shall be governed by the laws of the State of Delaware.) Tj
+0 -14 Td
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000010 00000 n 
+0000000062 00000 n 
+0000000122 00000 n 
+0000000273 00000 n 
+0000002526 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+2626
+%%EOF

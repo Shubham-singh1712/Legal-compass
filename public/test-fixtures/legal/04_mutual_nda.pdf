@@ -1,0 +1,81 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /ProcSet [/PDF /Text] /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 1886 >>
+stream
+BT
+/F1 10 Tf
+50 750 Td
+(MUTUAL NON-DISCLOSURE AGREEMENT) Tj
+0 -14 Td
+(This Mutual Non-Disclosure Agreement \("Agreement"\) is entered into on April 5, 2025 between) Tj
+0 -14 Td
+(Quantum Innovations Inc. \("Party A"\) and Nexus Data Labs LLC \("Party B"\).) Tj
+0 -14 Td
+0 -10 Td
+(1. DEFINITION OF CONFIDENTIAL INFORMATION) Tj
+0 -14 Td
+(Confidential Information includes technical data, software architecture, product designs, customer lists,) Tj
+0 -14 Td
+(and proprietary business information disclosed in connection with exploring a commercial partnership.) Tj
+0 -14 Td
+0 -10 Td
+(2. EXCLUSIONS FROM CONFIDENTIALITY) Tj
+0 -14 Td
+(Confidential Information does not include information that is publicly known, already in possession of recipient) Tj
+0 -14 Td
+(without breach, or independently developed without reference to disclosed materials.) Tj
+0 -14 Td
+0 -10 Td
+(3. OBLIGATIONS OF RECEIVING PARTY) Tj
+0 -14 Td
+(Receiving party shall maintain strict confidentiality and exercise a reasonable degree of care.) Tj
+0 -14 Td
+(Receiving party may disclose confidential information only to employees and advisers with a need to know.) Tj
+0 -14 Td
+(Receiving party shall not reverse engineer, decompile, or disassemble any proprietary prototypes.) Tj
+0 -14 Td
+0 -10 Td
+(4. TERM AND RETURN OF MATERIALS) Tj
+0 -14 Td
+(Confidentiality obligations shall survive for a period of 3 years following disclosure.) Tj
+0 -14 Td
+(Upon written request, receiving party shall return or destroy all confidential documents within 15 days.) Tj
+0 -14 Td
+0 -10 Td
+(5. REMEDIES AND INJUNCTIVE RELIEF) Tj
+0 -14 Td
+(Parties agree that unauthorized disclosure causes irreparable harm entitled to seek injunctive relief without bond.) Tj
+0 -14 Td
+0 -10 Td
+(6. GOVERNING LAW) Tj
+0 -14 Td
+(This Agreement is governed by the laws of the State of New York.) Tj
+0 -14 Td
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000010 00000 n 
+0000000062 00000 n 
+0000000122 00000 n 
+0000000273 00000 n 
+0000002217 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+2317
+%%EOF
